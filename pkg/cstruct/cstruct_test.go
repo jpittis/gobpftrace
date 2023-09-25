@@ -35,7 +35,7 @@ const (
 func TestFromGoStruct(t *testing.T) {
 	rt := reflect.TypeOf(example{})
 	testFromGoStruct(t, rt, false, converted)
-	testFromGoStruct(t, rt, true, convertedSkipPrivate)
+	testFromGoStruct(t, rt, true, convertedSkipProtobufPrivate)
 }
 
 func testFromGoStruct(t *testing.T, rt reflect.Type, skipProtobufPrivate bool, expected string) {
